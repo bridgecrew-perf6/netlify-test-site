@@ -1,0 +1,33 @@
+.coming_soon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15rem;
+    h1{
+        font-size: 100px !important;
+        color: aqua;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+.coming_soon{
+    padding: 13rem 6rem;
+    h1{
+        font-size: 30px !important;
+    }
+}
+
+}
+
+@media (max-width: 400px) {
+    .coming_soon{
+        padding: 13rem 3rem;
+        h1{
+            font-size: 30px !important;
+        }
+    }
+    
+    }

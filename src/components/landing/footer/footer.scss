@@ -1,0 +1,22 @@
+
+
+.main-footer{
+   padding: 1rem 0;
+    background: #02001E !important;
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .right{
+            p{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 21px;
+                text-align: center;
+
+                color: #3C515A;
+            }
+        }
+    }
+}

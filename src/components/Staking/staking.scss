@@ -1,0 +1,54 @@
+.staking{
+    margin-top: 55px;
+    .main{
+        margin-bottom: 70px;
+        .text{
+            margin-bottom: 50px;
+            h2{
+                text-align: center;
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 100%;
+                text-align: center;
+                text-transform: uppercase;
+                color: #C1FFF8;
+            }
+        }
+        .cards{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0 31px;
+            flex-wrap: wrap;
+            .item{
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgba(255, 255, 255, 0.1) !important;
+                backdrop-filter: blur(30px) !important;
+                width: 220px;
+                .inner{
+                    img{
+                        padding: 8px;
+                        padding-bottom: 0;
+                    }
+                    h4{
+                        font-family: 'Rubik';
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 20px;
+                        line-height: 24px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: #C1FFF8;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
