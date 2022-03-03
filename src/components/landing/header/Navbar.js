@@ -3,6 +3,8 @@ import { NavLink, Link } from "react-router-dom";
 import "./navbar.scss";
 import { HashLink } from "react-router-hash-link";
 import { useEffect } from "react";
+import { useWeb3React } from "@web3-react/core";
+import { injected, walletconnect } from "../../../Wallet/connectors";
 
 const Navbar = () => {
   // const PurchaseModalOpen = () => {
@@ -16,6 +18,42 @@ const Navbar = () => {
   // useEffect(() => {
   //   PurchaseModalOpen();
   // }, []);
+
+  const context = useWeb3React();
+  const {
+    connector,
+    library,
+    chainId,
+    account,
+    activate,
+    deactivate,
+    active,
+    error,
+  } = context;
+  const connect = async () => {
+    await activate(walletconnect);
+    if (await error) {
+      localStorage.setItem("toggle", false);
+    }
+  };
+  const disconnect = async () => {
+    await deactivate();
+    localStorage.setItem("toggle", false);
+  };
+  useEffect(() => {
+    let toggle = "false";
+    try {
+      toggle = localStorage.getItem("toggle");
+    } catch (e) {
+      console.log(e);
+      localStorage.setItem("toggle", false);
+    }
+    if (!active && toggle === "false") {
+      console.log("dont call");
+    } else {
+      connect().then();
+    }
+  }, []);
 
   return (
     <>
@@ -76,7 +114,6 @@ const Navbar = () => {
                       </Link>
                     </li>
                     <li class="nav-item dropdown">
-                      
                       <a
                         class="nav-link dropdown-toggle"
                         href="/"
@@ -93,21 +130,18 @@ const Navbar = () => {
                       >
                         <li>
                           <HashLink to="/#aboutus_page">
-                          <a class="dropdown-item" href="/">
-                            ABOUT CYN-C
-                          </a>
+                            <a class="dropdown-item" href="/">
+                              ABOUT CYN-C
+                            </a>
                           </HashLink>
                         </li>
                         <li>
                           <hr class="dropdown-divider" />
                         </li>
                         <li>
-                        
                           <HashLink to="#ournft_page" class="dropdown-item">
                             NFTS
                           </HashLink>
-                          
-                         
                         </li>
 
                         <li>
@@ -115,55 +149,50 @@ const Navbar = () => {
                         </li>
                         <li>
                           <HashLink to="/#cyncoin_page">
-                          <a class="dropdown-item" href="#">
-                            CYN-COIN
-                          </a>
+                            <a class="dropdown-item" href="#">
+                              CYN-COIN
+                            </a>
                           </HashLink>
-                          
                         </li>
                         <li>
                           <hr class="dropdown-divider" />
                         </li>
                         <li>
                           <HashLink to="/#howtobuy_page">
-                          <a class="dropdown-item" href="#">
-                            HOW TO BUY
-                          </a>
+                            <a class="dropdown-item" href="#">
+                              HOW TO BUY
+                            </a>
                           </HashLink>
-                         
                         </li>
                         <li>
                           <hr class="dropdown-divider" />
                         </li>
                         <li>
                           <HashLink to="/#joinour_page">
-                          <a class="dropdown-item" href="#">
-                            COMMUNITY LINKS
-                          </a>
+                            <a class="dropdown-item" href="#">
+                              COMMUNITY LINKS
+                            </a>
                           </HashLink>
-                         
                         </li>
                         <li>
                           <hr class="dropdown-divider" />
                         </li>
                         <li>
                           <HashLink to="/#meetour_page">
-                          <a class="dropdown-item" href="#">
-                            THE TEAM
-                          </a>
+                            <a class="dropdown-item" href="#">
+                              THE TEAM
+                            </a>
                           </HashLink>
-                          
                         </li>
                         <li>
                           <hr class="dropdown-divider" />
                         </li>
                         <li>
                           <HashLink to="/#contactus_page">
-                          <a class="dropdown-item" href="#">
-                            CONTACT US
-                          </a>
+                            <a class="dropdown-item" href="#">
+                              CONTACT US
+                            </a>
                           </HashLink>
-                          
                         </li>
                         <li></li>
                       </ul>
@@ -195,7 +224,14 @@ const Navbar = () => {
                                         </li> */}
                   </ul>
 
-                  <button className="sbvsx">CONNECT WALLET</button>
+                  <button
+                    className="sbvsx"
+                    onClick={async () => {
+                      !active ? await connect() : await disconnect();
+                    }}
+                  >
+                    {!active ? "Connect Wallet " : account}
+                  </button>
                   {/* <form className="form-inline my-2 my-lg-0">
                                         <a className="nav-buttoo" href="https://docs.google.com/forms/d/e/1FAIpQLSdRkAPW_zLgEFBqNvASjgPBqAYozeAkcG1tkVOdr5GLs3la8w/viewform?usp=sf_link" target="_blank">Apply for IDO</a>
                                     </form> */}
@@ -205,7 +241,6 @@ const Navbar = () => {
           </div>
         </div>
       </section>
-      
     </>
   );
 };
