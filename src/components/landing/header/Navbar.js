@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
+import WalletModal from "../WalletModal";
 import "./navbar.scss";
 import { HashLink } from "react-router-hash-link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { injected, walletconnect } from "../../../Wallet/connectors";
 
@@ -18,6 +19,7 @@ const Navbar = () => {
   // useEffect(() => {
   //   PurchaseModalOpen();
   // }, []);
+  const [showModal, setShowModal] = useState(false);
 
   const context = useWeb3React();
   const {
@@ -30,30 +32,47 @@ const Navbar = () => {
     active,
     error,
   } = context;
-  const connect = async () => {
-    await activate(walletconnect);
-    if (await error) {
+  const connect = async (metamask = true) => {
+    try {
+      localStorage.setItem("metamask", false);
       localStorage.setItem("toggle", false);
+      if (metamask) {
+        console.log("meta mask envoked");
+        await activate(injected);
+        localStorage.setItem("metamask", true);
+        localStorage.setItem("toggle", false);
+      } else {
+        console.log("connect wallet envoked");
+        await activate(walletconnect);
+        localStorage.setItem("metamask", false);
+        localStorage.setItem("toggle", true);
+      }
+      setShowModal(false);
+    } catch (e) {
+      alert(e);
     }
   };
   const disconnect = async () => {
     await deactivate();
+    localStorage.setItem("metamask", false);
     localStorage.setItem("toggle", false);
   };
+
   useEffect(() => {
-    let toggle = "false";
-    try {
-      toggle = localStorage.getItem("toggle");
-    } catch (e) {
-      console.log(e);
-      localStorage.setItem("toggle", false);
-    }
-    if (!active && toggle === "false") {
-      console.log("dont call");
+    let metamask = localStorage.getItem("metamask")
+      ? localStorage.getItem("metamask")
+      : "false";
+    let toggle = localStorage.getItem("toggle")
+      ? localStorage.getItem("toggle")
+      : "false";
+    if (toggle === "false" && metamask === "true") {
+      connect(true).then();
+    } else if (toggle === "true" && metamask === "false") {
+      connect(false).then();
     } else {
-      connect().then();
+      console.log("no need to call");
     }
-  }, []);
+  }, [active]);
 
   return (
     <>
@@ -227,10 +246,12 @@ const Navbar = () => {
                   <button
                     className="sbvsx"
                     onClick={async () => {
-                      !active ? await connect() : await disconnect();
+                      !active ? setShowModal(true) : await disconnect();
                     }}
                   >
-                    {!active ? "Connect Wallet " : account}
+                    {!active
+                      ? "Connect Wallet "
+                      : account.substr(0, 4) + "..." + account.substr(38, 4)}
                   </button>
                   {/* <form className="form-inline my-2 my-lg-0">
                                         <a className="nav-buttoo" href="https://docs.google.com/forms/d/e/1FAIpQLSdRkAPW_zLgEFBqNvASjgPBqAYozeAkcG1tkVOdr5GLs3la8w/viewform?usp=sf_link" target="_blank">Apply for IDO</a>
@@ -241,6 +262,9 @@ const Navbar = () => {
           </div>
         </div>
       </section>
+      {showModal && (
+        <WalletModal closeModal={() => setShowModal(false)} connect={connect} />
+      )}
     </>
   );
 };
