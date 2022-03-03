@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
+import WalletModal from '../WalletModal';
 import "./navbar.scss";
 import { HashLink } from "react-router-hash-link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   // const PurchaseModalOpen = () => {
@@ -16,6 +17,7 @@ const Navbar = () => {
   // useEffect(() => {
   //   PurchaseModalOpen();
   // }, []);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <>
@@ -195,7 +197,7 @@ const Navbar = () => {
                                         </li> */}
                   </ul>
 
-                  <button className="sbvsx">CONNECT WALLET</button>
+                  <button className="sbvsx" onClick={() => setShowModal(true)}>CONNECT WALLET</button>
                   {/* <form className="form-inline my-2 my-lg-0">
                                         <a className="nav-buttoo" href="https://docs.google.com/forms/d/e/1FAIpQLSdRkAPW_zLgEFBqNvASjgPBqAYozeAkcG1tkVOdr5GLs3la8w/viewform?usp=sf_link" target="_blank">Apply for IDO</a>
                                     </form> */}
@@ -205,7 +207,7 @@ const Navbar = () => {
           </div>
         </div>
       </section>
-      
+      {showModal && <WalletModal closeModal={() => setShowModal(false)}/>}
     </>
   );
 };
