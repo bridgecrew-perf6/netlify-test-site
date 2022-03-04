@@ -44,10 +44,8 @@ const Navbar = () => {
       } else {
         console.log("connect wallet envoked");
         await activate(walletconnect);
-        if (await account) {
-          localStorage.setItem("metamask", false);
-          localStorage.setItem("toggle", true);
-        }
+        localStorage.setItem("metamask", false);
+        localStorage.setItem("toggle", true);
       }
       setShowModal(false);
     } catch (e) {
