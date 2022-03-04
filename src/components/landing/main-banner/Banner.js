@@ -520,7 +520,7 @@ ethereum(network: ethereum) {
                   <h4>Step-03: Swap $ETH for $CYNC</h4>
                   <p>
                     Add $CYNC Contract Address to MetaMask Custom Token -
-                    0xa5522d6137Ece774e8084BBf9c34398192cCdCa5 Enter the amount
+                    0xa5522d6137Ece774e8084BBf9c34398192cCdCa5 <br/> Enter the amount
                     of $ETH you would like to swap for $CYNC. Click Connect
                     Wallet then Swap! You are now a $CYNC Holder!
                   </p>
