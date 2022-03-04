@@ -394,25 +394,21 @@ ethereum(network: ethereum) {
                     <h4>Taxation</h4>
                     <p>
                       <h5>2% Reflection</h5>
-                      <br />
-                      2% of ALL transactions for buying and selling will be
-                      reflected back to all holders of CYN-Coin.
+                      <p>2% of ALL transactions for buying and selling will be
+                      reflected back to all holders of CYN-Coin.</p>
                       <br />
                       <h5>1% Community Fund</h5>
-                      <br />
-                      1% of all transactions will be sent to a gnosis safe
+                      <p>1% of all transactions will be sent to a gnosis safe
                       wallet, funds will be used to add incentive for new
-                      investors and reward existing CYN-Coin holders.
+                      investors and reward existing CYN-Coin holders.</p>
                       <br />
                       <h5>1% Project Fund</h5>
-                      <br />
-                      1% of all transactions will be sent to a gnosis safe
-                      wallet, funds will be used to develop the project.
+                      <p>1% of all transactions will be sent to a gnosis safe
+                      wallet, funds will be used to develop the project.</p>
                       <br />
                     </p>
                     <h3>
                       Contract Address
-                      <br />
                     </h3>
                     <p>0xa5522d6137Ece774e8084BBf9c34398192cCdCa5</p>
                     <button>
