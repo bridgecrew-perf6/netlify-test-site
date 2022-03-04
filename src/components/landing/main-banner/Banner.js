@@ -263,7 +263,7 @@ ethereum(network: ethereum) {
                     </div>
                     <h5>About Us</h5>
                     <h4>
-                      Cyn-C Is a multi-layered blockchain project designed
+                      Cyn-C is a multi-layered blockchain project designed
                       <br /> to progressively build a comic-based NFT <br />
                       universe, featuring a fully fleshed out
                       <br /> game and coin reward experience for the Cyn-
@@ -277,7 +277,7 @@ ethereum(network: ethereum) {
                       cards, comics, limited edition artwork and memberships.
                     </p>
                     <h3>
-                      The aim of the Cyn-C is to build central utility
+                      The aim of Cyn-C is to build central utility
                       <br /> around our very own currency, Cyn-Coin <br />
                       ($CYNC), in all facets of the project.
                     </h3>
@@ -393,18 +393,18 @@ ethereum(network: ethereum) {
                     <h5>ABOUT THE TOKEN</h5>
                     <h4>Taxation</h4>
                     <p>
-                      2% Reflection
+                      <h5>2% Reflection</h5>
                       <br />
                       2% of ALL transactions for buying and selling will be
                       reflected back to all holders of CYN-Coin.
                       <br />
-                      1% Community Fund
+                      <h5>1% Community Fund</h5>
                       <br />
                       1% of all transactions will be sent to a gnosis safe
                       wallet, funds will be used to add incentive for new
                       investors and reward existing CYN-Coin holders.
                       <br />
-                      1% Project Fund
+                      <h5>1% Project Fund</h5>
                       <br />
                       1% of all transactions will be sent to a gnosis safe
                       wallet, funds will be used to develop the project.
@@ -413,8 +413,8 @@ ethereum(network: ethereum) {
                     <h3>
                       Contract Address
                       <br />
-                      0xa5522d6137Ece774e8084BBf9c34398192cCdCa5
                     </h3>
+                    <p>0xa5522d6137Ece774e8084BBf9c34398192cCdCa5</p>
                     <button>
                       {" "}
                       <a href="/Swap"> BUY ON CYNSWAP</a>
@@ -487,19 +487,13 @@ ethereum(network: ethereum) {
                   <img src="./assestmeta/Crynical/buy1.svg" alt="img" />
                 </div>
                 <div className="right">
-                  <h4>Step-01</h4>
+                  <h4>Step-01: Create a MetaMask Wallet</h4>
                   <p>
-                    Create a MetaMask Wallet $CYNC token is available on the
-                    <br />
-                    Ethereum blockchain. MetaMask is a third party ERC20
-                    <br />
-                    (Ethereum) browser wallet, and the very best at that! On
-                    <br />
-                    Google Chrome, visit metamask.io to download the extension
-                    <br />
-                    and set up a wallet. On mobile? Get MetaMask's app for
-                    <br />
-                    iPhone or Android.
+                    $CYNC token is available on the Ethereum blockchain.
+                    MetaMask is a third party ERC20 (Ethereum) browser wallet,
+                    and the very best at that! On Google Chrome, visit
+                    metamask.io to download the extension and set up a wallet.
+                    On mobile? Get MetaMask's app for iPhone or Android.
                   </p>
                 </div>
               </div>
@@ -508,13 +502,11 @@ ethereum(network: ethereum) {
               </div>
               <div className="main">
                 <div className="right hdfbndjfj">
-                  <h4>Step-02</h4>
+                  <h4>Step-02: Send $ETH to MetaMask</h4>
                   <p>
-                    Send $ETH to MetaMask Acquire Ethereum through MetaMask
-                    <br />
-                    itself or transfer it to your MetaMask wallet address from
-                    <br />
-                    another wallet (e.g. Coinbase or Binance).
+                    Acquire Ethereum through MetaMask itself or transfer it to
+                    your MetaMask wallet address from another wallet (e.g.
+                    Coinbase or Binance).
                   </p>
                 </div>
                 <div className="left">
@@ -529,15 +521,12 @@ ethereum(network: ethereum) {
                   <img src="./assestmeta/Crynical/buy3.svg" alt="img" />
                 </div>
                 <div className="right">
-                  <h4>Step-03</h4>
+                  <h4>Step-03: Swap $ETH for $CYNC</h4>
                   <p>
-                    Swap $ETH for $CYNC Add $CYNC Contract Address to MetaMask
-                    <br /> Custom Token -
-                    0xa5522d6137Ece774e8084BBf9c34398192cCdCa5
-                    <br /> Enter the amount of $ETH you would like to swap for
-                    <br />
-                    $CYNC. Click Connect Wallet then Swap!
-                    <br /> You are now a $CYNC Holder!
+                    Add $CYNC Contract Address to MetaMask Custom Token -
+                    0xa5522d6137Ece774e8084BBf9c34398192cCdCa5 Enter the amount
+                    of $ETH you would like to swap for $CYNC. Click Connect
+                    Wallet then Swap! You are now a $CYNC Holder!
                   </p>
                 </div>
               </div>
