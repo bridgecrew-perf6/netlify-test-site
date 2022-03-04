@@ -263,21 +263,22 @@ ethereum(network: ethereum) {
                     </div>
                     <h5>About Us</h5>
                     <h4>
-                      Cyn-C Is a multi-layered blockchain project designed to
-                      progressively build a comic-based <br />
-                      NFT universe, featuring a fully fleshed out game and coin
-                      reward experience for the Cyn-
+                      Cyn-C Is a multi-layered blockchain project designed
+                      <br /> to progressively build a comic-based NFT <br />
+                      universe, featuring a fully fleshed out
+                      <br /> game and coin reward experience for the Cyn-
                       <br />
                       Community.
                     </h4>
                     <p>
-                      The project combines the use of collectible NFTs in the
-                      form of trading cards, PVP battle <br />
+                      The project combines the use of collectible
+                      <br /> NFTs in the form of trading cards, PVP battle{" "}
+                      <br />
                       cards, comics, limited edition artwork and memberships.
                     </p>
                     <h3>
-                      The aim of the Cyn-C is to build central utility around
-                      our very own currency, Cyn-Coin <br />
+                      The aim of the Cyn-C is to build central utility
+                      <br /> around our very own currency, Cyn-Coin <br />
                       ($CYNC), in all facets of the project.
                     </h3>
                     <h4>
@@ -624,10 +625,8 @@ ethereum(network: ethereum) {
               <div className="main_card">
                 <div className="card">
                   <img
-                    src="./assestmeta/Crynical/card1.png"
+                    src="./assestmeta/Crynical/kd.png"
                     alt="img"
-                    width="150px"
-                    height="100px"
                     className="img-fluid"
                   />
                   <h6>KD</h6>
@@ -642,11 +641,11 @@ ethereum(network: ethereum) {
                 </div>
                 <div className="card">
                   <img
-                    src="./assestmeta/Crynical/card1.png"
+                    src="./assestmeta/Crynical/stem.png"
                     alt="img"
                     className="img-fluid"
                   />
-                  <h6>Stemr0ach</h6>
+                  <h6>Stem</h6>
                   <p> Project Manager</p>
                   {/* <div className="icon">
                     <img
@@ -658,7 +657,7 @@ ethereum(network: ethereum) {
                 </div>
                 <div className="card">
                   <img
-                    src="./assestmeta/Crynical/card1.png"
+                    src="./assestmeta/Crynical/Lior.png"
                     alt="img"
                     className="img-fluid"
                   />
@@ -674,7 +673,7 @@ ethereum(network: ethereum) {
                 </div>
                 <div className="card">
                   <img
-                    src="./assestmeta/Crynical/card2.svg"
+                    src="./assestmeta/Crynical/hatter.png"
                     alt="img"
                     className="img-fluid"
                   />
@@ -690,7 +689,7 @@ ethereum(network: ethereum) {
                 </div>
                 <div className="card">
                   <img
-                    src="./assestmeta/Crynical/card3.svg"
+                    src="./assestmeta/Crynical/majik.png"
                     alt="img"
                     className="img-fluid"
                   />
@@ -706,8 +705,9 @@ ethereum(network: ethereum) {
                 </div>
                 <div className="card">
                   <img
-                    src="./assestmeta/Crynical/card2.svg"
+                    src="./assestmeta/Crynical/person.png"
                     alt="img"
+                    style={{ height: 190 }}
                     className="img-fluid"
                   />
                   <h6>大勋</h6>
