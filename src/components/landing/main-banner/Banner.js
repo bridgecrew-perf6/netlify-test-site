@@ -3,6 +3,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./banner.scss";
+import { useHistory } from "react-router-dom";
 const Banner = () => {
   const PurchaseModalOpen = () => {
     window.$("#exampleModal").modal("show");
@@ -17,7 +18,11 @@ const Banner = () => {
   }, []);
 
   let axios = require("axios");
-
+  const history = useHistory();
+  const routeChange = () => {
+    let path = `https://opensea.io/CYN-C`;
+    window.open(path, "_blank");
+  };
   async function dataCall() {
     try {
       let ethToUSD = `
@@ -256,27 +261,29 @@ ethereum(network: ethereum) {
                     <div className="banner_imgncsjcn">
                       <img src="./assestmeta/Crynical/about1.svg" alt="img" />
                     </div>
-                    <h5>Who We Are</h5>
+                    <h5>About Us</h5>
                     <h4>
-                      Nam libero tempore, cum soluta nobis est eligendi optio
-                      cumque nihil impedit quo minus id quod maxime.
+                      Cyn-C Is a multi-layered blockchain project designed to
+                      progressively build a comic-based <br />
+                      NFT universe, featuring a fully fleshed out game and coin
+                      reward experience for the Cyn-
+                      <br />
+                      Community.
                     </h4>
                     <p>
-                      At vero eos et accusamus et iusto odio dignissimos ducimus
-                      qui <br /> blanditiis praesentium voluptatum deleniti
-                      atque corrupti quos <br /> quidem rerum facilis est et
-                      expedita distinctio libero tempore, <br /> cum soluta
-                      nobis est. <br /> <br />
-                      Temporibus autem quibusdam et aut officiis debitis aut
-                      rerum necessitatibus saepe eveniet ut et voluptates
-                      repudiandae sint et molestiae non recusandae. Itaque earum
-                      rerum hic tenetur a sapiente delectus
+                      The project combines the use of collectible NFTs in the
+                      form of trading cards, PVP battle <br />
+                      cards, comics, limited edition artwork and memberships.
                     </p>
                     <h3>
-                      At vero eos et accusamus et iusto odio dignissimos <br />{" "}
-                      ducimus qui blanditiis praesentium voluptatum deleniti{" "}
-                      <br /> atque.
+                      The aim of the Cyn-C is to build central utility around
+                      our very own currency, Cyn-Coin <br />
+                      ($CYNC), in all facets of the project.
                     </h3>
+                    <h4>
+                      All information on staking rewards can be found in the
+                      whitepaper.
+                    </h4>
                     <button>
                       {" "}
                       <a
@@ -320,30 +327,29 @@ ethereum(network: ethereum) {
                 </div>
                 <h1 className="ghghg">Characters of the Cynverse</h1>
                 <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium <br /> voluptatum deleniti atque
-                  corrupti quos quidem rerum facilis est et expedita.
+                  Click on each character to view their respective OpenSea page
+                  with all available NFTs.
                 </p>
               </div>
               <div class="owl_option">
                 <OwlCarousel className="owl-theme" {...owl_option}>
-                  <div class="item">
+                  <div class="item" onClick={routeChange}>
                     <img src="./assestmeta/Crynical/our1.png" alt="img" />
                     <h4>Dystain #001</h4>
                   </div>
-                  <div class="item">
+                  <div class="item" onClick={routeChange}>
                     <img src="./assestmeta/Crynical/our2.png" alt="img" />
                     <h4>Z-1A #001</h4>
                   </div>
-                  <div class="item">
+                  <div class="item" onClick={routeChange}>
                     <img src="./assestmeta/Crynical/our3.png" alt="img" />
                     <h4>Niancia #001</h4>
                   </div>
-                  <div class="item">
+                  <div class="item" onClick={routeChange}>
                     <img src="./assestmeta/Crynical/our4.png" alt="img" />
                     <h4>Z-Merc #001</h4>
                   </div>
-                  <div class="item">
+                  <div class="item" onClick={routeChange}>
                     <img src="./assestmeta/Crynical/our1.png" alt="img" />
                     <h4>Dystain #001</h4>
                   </div>
@@ -383,26 +389,30 @@ ethereum(network: ethereum) {
                     <div className="banner_imgncsjcn">
                       <img src="./assestmeta/Crynical/token1.svg" alt="img" />
                     </div>
-                    <h5>ABOUT TOKEN</h5>
-                    <h4>
-                      Nam libero tempore, cum soluta nobis est eligendi optio
-                      cumque nihil impedit quo minus id quod maxime.
-                    </h4>
+                    <h5>ABOUT THE TOKEN</h5>
+                    <h4>Taxation</h4>
                     <p>
-                      At vero eos et accusamus et iusto odio dignissimos ducimus
-                      qui <br /> blanditiis praesentium voluptatum deleniti
-                      atque corrupti quos <br /> quidem rerum facilis est et
-                      expedita distinctio libero tempore, <br /> cum soluta
-                      nobis est. <br /> <br />
-                      Temporibus autem quibusdam et aut officiis debitis aut
-                      rerum necessitatibus saepe eveniet ut et voluptates
-                      repudiandae sint et molestiae non recusandae. Itaque earum
-                      rerum hic tenetur a sapiente delectus
+                      2% Reflection
+                      <br />
+                      2% of ALL transactions for buying and selling will be
+                      reflected back to all holders of CYN-Coin.
+                      <br />
+                      1% Community Fund
+                      <br />
+                      1% of all transactions will be sent to a gnosis safe
+                      wallet, funds will be used to add incentive for new
+                      investors and reward existing CYN-Coin holders.
+                      <br />
+                      1% Project Fund
+                      <br />
+                      1% of all transactions will be sent to a gnosis safe
+                      wallet, funds will be used to develop the project.
+                      <br />
                     </p>
                     <h3>
-                      At vero eos et accusamus et iusto odio dignissimos <br />{" "}
-                      ducimus qui blanditiis praesentium voluptatum deleniti{" "}
-                      <br /> atque.
+                      Contract Address
+                      <br />
+                      0xa5522d6137Ece774e8084BBf9c34398192cCdCa5
                     </h3>
                     <button>
                       {" "}
@@ -470,11 +480,6 @@ ethereum(network: ethereum) {
                   <img src="./assestmeta/Crynical/buy.svg" alt="img" />
                 </div>
                 <h1 className="ghghg">how to buy</h1>
-                <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium <br /> voluptatum deleniti atque
-                  corrupti quos quidem rerum facilis est et expedita.
-                </p>
               </div>
               <div className="main">
                 <div className="left">
@@ -483,10 +488,17 @@ ethereum(network: ethereum) {
                 <div className="right">
                   <h4>Step-01</h4>
                   <p>
-                    At vero eos et accusamus et iusto odio dignissimos <br />{" "}
-                    ducimus qui blanditiis praesentium voluptatum deleniti{" "}
-                    <br /> atque corrupti quos quidem rerum facilis est et{" "}
-                    <br /> expedita.
+                    Create a MetaMask Wallet $CYNC token is available on the
+                    <br />
+                    Ethereum blockchain. MetaMask is a third party ERC20
+                    <br />
+                    (Ethereum) browser wallet, and the very best at that! On
+                    <br />
+                    Google Chrome, visit metamask.io to download the extension
+                    <br />
+                    and set up a wallet. On mobile? Get MetaMask's app for
+                    <br />
+                    iPhone or Android.
                   </p>
                 </div>
               </div>
@@ -497,10 +509,11 @@ ethereum(network: ethereum) {
                 <div className="right hdfbndjfj">
                   <h4>Step-02</h4>
                   <p>
-                    At vero eos et accusamus et iusto odio dignissimos <br />{" "}
-                    ducimus qui blanditiis praesentium voluptatum deleniti{" "}
-                    <br /> atque corrupti quos quidem rerum facilis est et{" "}
-                    <br /> expedita.
+                    Send $ETH to MetaMask Acquire Ethereum through MetaMask
+                    <br />
+                    itself or transfer it to your MetaMask wallet address from
+                    <br />
+                    another wallet (e.g. Coinbase or Binance).
                   </p>
                 </div>
                 <div className="left">
@@ -517,10 +530,13 @@ ethereum(network: ethereum) {
                 <div className="right">
                   <h4>Step-03</h4>
                   <p>
-                    At vero eos et accusamus et iusto odio dignissimos <br />{" "}
-                    ducimus qui blanditiis praesentium voluptatum deleniti{" "}
-                    <br /> atque corrupti quos quidem rerum facilis est et{" "}
-                    <br /> expedita.
+                    Swap $ETH for $CYNC Add $CYNC Contract Address to MetaMask
+                    <br /> Custom Token -
+                    0xa5522d6137Ece774e8084BBf9c34398192cCdCa5
+                    <br /> Enter the amount of $ETH you would like to swap for
+                    <br />
+                    $CYNC. Click Connect Wallet then Swap!
+                    <br /> You are now a $CYNC Holder!
                   </p>
                 </div>
               </div>
@@ -610,9 +626,11 @@ ethereum(network: ethereum) {
                   <img
                     src="./assestmeta/Crynical/card1.png"
                     alt="img"
+                    width="150px"
+                    height="100px"
                     className="img-fluid"
                   />
-                  <h6>KD6</h6>
+                  <h6>KD</h6>
                   <p>Project Manager</p>
                   {/* <div className="icon">
                     <img
@@ -827,11 +845,6 @@ ethereum(network: ethereum) {
                     <img src="./assestmeta/Crynical/contact1.svg" alt="img" />
                   </div>
                   <h1 className="ghghg">contact us</h1>
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium voluptatum <br /> deleniti atque
-                    corrupti quos quidem rerum facilis est et expedita.
-                  </p>
                 </div>
                 <div className="under_btn">
                   <div className="main">
