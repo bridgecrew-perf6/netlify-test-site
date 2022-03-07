@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import WalletModal from "../WalletModal";
 import "./navbar.scss";
@@ -37,12 +37,12 @@ const Navbar = () => {
       localStorage.setItem("metamask", false);
       localStorage.setItem("toggle", false);
       if (metamask) {
-        console.log("meta mask envoked");
+        // console.log("meta mask envoked");
         await activate(injected);
         localStorage.setItem("metamask", true);
         localStorage.setItem("toggle", false);
       } else {
-        console.log("connect wallet envoked");
+        // console.log("connect wallet envoked");
         await activate(walletconnect);
         localStorage.setItem("metamask", false);
         localStorage.setItem("toggle", true);
@@ -57,6 +57,14 @@ const Navbar = () => {
     localStorage.setItem("metamask", false);
     localStorage.setItem("toggle", false);
   };
+
+  const connection = async() => {
+    if (active) {
+      await disconnect();
+    } else {
+      setShowModal(true);
+    }
+  }
 
   useEffect(() => {
     let metamask = localStorage.getItem("metamask")
@@ -245,13 +253,11 @@ const Navbar = () => {
 
                   <button
                     className="sbvsx"
-                    onClick={async () => {
-                      !active ? setShowModal(true) : await disconnect();
-                    }}
+                    onClick={() => connection()}
                   >
                     {!active
                       ? "Connect Wallet "
-                      : account.substr(0, 4) + "..." + account.substr(38, 4)}
+                      : account.slice(0,6) + "..." + account.slice(-4)}
                   </button>
                   {/* <form className="form-inline my-2 my-lg-0">
                                         <a className="nav-buttoo" href="https://docs.google.com/forms/d/e/1FAIpQLSdRkAPW_zLgEFBqNvASjgPBqAYozeAkcG1tkVOdr5GLs3la8w/viewform?usp=sf_link" target="_blank">Apply for IDO</a>

@@ -14,7 +14,9 @@ const Banner = () => {
   };
   const [price, setprice] = useState(0);
   useEffect(() => {
-    PurchaseModalOpen();
+    setTimeout(() => {
+      PurchaseModalOpen();
+    }, 10000)
   }, []);
 
   let axios = require("axios");
@@ -335,24 +337,36 @@ ethereum(network: ethereum) {
               <div class="owl_option">
                 <OwlCarousel className="owl-theme" {...owl_option}>
                   <div class="item" onClick={routeChange}>
-                    <img src="./assestmeta/Crynical/our1.png" alt="img" />
-                    <h4>Dystain #001</h4>
+                    <img src="./assestmeta/NFTS/Dystain.jpeg" alt="img" />
+                    <h4>Dystain</h4>
                   </div>
                   <div class="item" onClick={routeChange}>
-                    <img src="./assestmeta/Crynical/our2.png" alt="img" />
-                    <h4>Z-1A #001</h4>
+                    <img src="./assestmeta/NFTS/Z-1A.jpeg" alt="img" />
+                    <h4>Z-1A</h4>
                   </div>
                   <div class="item" onClick={routeChange}>
-                    <img src="./assestmeta/Crynical/our3.png" alt="img" />
-                    <h4>Niancia #001</h4>
+                    <img src="./assestmeta/NFTS/Niancia.jpeg" alt="img" />
+                    <h4>Niancia</h4>
                   </div>
                   <div class="item" onClick={routeChange}>
-                    <img src="./assestmeta/Crynical/our4.png" alt="img" />
-                    <h4>Z-Merc #001</h4>
+                    <img src="./assestmeta/NFTS/Z-Merc.jpeg" alt="img" />
+                    <h4>Z-Merc</h4>
                   </div>
                   <div class="item" onClick={routeChange}>
-                    <img src="./assestmeta/Crynical/our1.png" alt="img" />
-                    <h4>Dystain #001</h4>
+                    <img src="./assestmeta/NFTS/Beruse.jpeg" alt="img" />
+                    <h4>Beruse</h4>
+                  </div>
+                  <div class="item" onClick={routeChange}>
+                    <img src="./assestmeta/NFTS/Big_Chunga.jpeg" alt="img" />
+                    <h4>Big Chunga</h4>
+                  </div>
+                  <div class="item" onClick={routeChange}>
+                    <img src="./assestmeta/NFTS/Karul_Kah.jpeg" alt="img" />
+                    <h4>Karul Kah</h4>
+                  </div>
+                  <div class="item" onClick={routeChange}>
+                    <img src="./assestmeta/NFTS/Sinthya.jpeg" alt="img" />
+                    <h4>Sinthya</h4>
                   </div>
                 </OwlCarousel>
               </div>
@@ -485,10 +499,10 @@ ethereum(network: ethereum) {
                 <div className="right">
                   <h4>Step-01: Create a MetaMask Wallet</h4>
                   <p>
-                    $CYNC token is available on the Ethereum blockchain.
+                    $CYNC token is available on the Ethereum blockchain.<br/>
                     MetaMask is a third party ERC20 (Ethereum) browser wallet,
-                    and the very best at that! On Google Chrome, visit
-                    metamask.io to download the extension and set up a wallet.
+                    and the very best at that!<br/> On Google Chrome, visit
+                    metamask.io to download the extension and set up a wallet.<br/>
                     On mobile? Get MetaMask's app for iPhone or Android.
                   </p>
                 </div>
@@ -501,7 +515,7 @@ ethereum(network: ethereum) {
                   <h4>Step-02: Send $ETH to MetaMask</h4>
                   <p>
                     Acquire Ethereum through MetaMask itself or transfer it to
-                    your MetaMask wallet address from another wallet (e.g.
+                    your<br/>MetaMask wallet address from another wallet (e.g.
                     Coinbase or Binance).
                   </p>
                 </div>
@@ -518,11 +532,11 @@ ethereum(network: ethereum) {
                 </div>
                 <div className="right">
                   <h4>Step-03: Swap $ETH for $CYNC</h4>
-                  <p>
-                    Add $CYNC Contract Address to MetaMask Custom Token -
-                    0xa5522d6137Ece774e8084BBf9c34398192cCdCa5 <br/> Enter the amount
-                    of $ETH you would like to swap for $CYNC. Click Connect
-                    Wallet then Swap! You are now a $CYNC Holder!
+                  <p style={{wordWrap: 'break-word'}}>
+                    Add $CYNC Contract Address to MetaMask Custom Token - <br/>
+                    <b>0xa5522d6137Ece774e8084BBf9c34398192cCdCa5</b> <br/> Enter the amount
+                    of $ETH you would like to swap for $CYNC. Click<br/> Connect
+                    Wallet then Swap!<br/>You are now a $CYNC Holder!
                   </p>
                 </div>
               </div>
@@ -596,7 +610,8 @@ ethereum(network: ethereum) {
           />
         </div>
       </section>
-
+      <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+      <div class="commonninja_component" comp-type="feed" comp-id="cffe189f-480f-4b65-a957-18450f0ec646"></div>
       <section className="meet_our" id="meetour_page">
         <div className="container_fluid">
           <div className="row">
@@ -727,11 +742,6 @@ ethereum(network: ethereum) {
                     <img src="./assestmeta/Crynical/join1.svg" alt="img" />
                   </div>
                   <h1 className="ghghg">join our community</h1>
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium voluptatum <br /> deleniti atque
-                    corrupti quos quidem rerum facilis est et expedita.
-                  </p>
                 </div>
                 <div className="logo_img">
                   <a href="https://twitter.com/CYNCProject" target="_blank">

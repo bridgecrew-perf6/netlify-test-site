@@ -18,7 +18,7 @@ const index = ({ closeModal, connect }) => {
             <li>
               <div
                 className="wallet-item"
-                onClick={async () => await connect()}
+                onClick={() => connect()}
               >
                 <div className="wallet-icon">
                   <img
@@ -34,7 +34,7 @@ const index = ({ closeModal, connect }) => {
             <li>
               <div
                 className="wallet-item"
-                onClick={async () => await connect(false)}
+                onClick={() => connect(false)}
               >
                 <div className="wallet-icon">
                   <img

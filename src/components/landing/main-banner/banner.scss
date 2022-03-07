@@ -607,7 +607,7 @@ body{
                 background: #0E1237;
                 border-radius: 10px;
                 padding: 2rem;
-                width: 60%;
+                max-width: 90vw;
                 h4{
                     font-style: normal;
                     font-weight: bold;
@@ -1060,11 +1060,14 @@ body{
             height: 750px;
             border-radius: 20px;
         }
+        
     }
     @media (max-width: 1600px) {
+        
 
     }
     @media (max-width: 1566px) {
+        
 
     }
     @media (max-width: 1440px) {
@@ -1326,7 +1329,9 @@ body{
     .main-navbar button{
         padding: 7px 11px;
     }
-
+    .contract {
+        font-size: 3vw;
+    }
 }
 
 
