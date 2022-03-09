@@ -5,9 +5,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./banner.scss";
 import { useHistory } from "react-router-dom";
 const Banner = () => {
-  const PurchaseModalOpen = () => {
-    window.$("#exampleModal").modal("show");
-  };
+  const [showModal, setShowModal] = useState(false);
 
   const PurchaseModalclose = () => {
     window.$("#exampleModal").modal("hide");
@@ -15,7 +13,7 @@ const Banner = () => {
   const [price, setprice] = useState(0);
   useEffect(() => {
     setTimeout(() => {
-      PurchaseModalOpen();
+      setShowModal(true);
     }, 10000);
   }, []);
 
@@ -909,48 +907,45 @@ ethereum(network: ethereum) {
       >
         Launch demo modal
       </button> */}
-      <div
-        class="modal fade modal-main"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            {/* <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> */}
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-              onClick={PurchaseModalclose}
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-            {/* </div> */}
-            <div class="modal-body">
-              <div className="main_text">
-                <h1 className="bhvchvh">CYN-C PROJECT</h1>
-                <p>
-                  Join our Discord today and receive a free Cyn-Champion playing
-                  card to battle with in The Cynoseum, our P2E Mini-Game!
-                </p>
-                <hr />
-              </div>
-              <div className="links_icon">
-                <span>
-                  <i class="fab fa-discord"></i>
-                </span>{" "}
-                <a href=" https://discord.gg/BpHbpDdt7w" target="_blank">
-                  Discord
-                </a>
+      {showModal && (
+        <div class="modal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              {/* </div> */}
+              <div class="modal-body">
+                <div className="flex space-between">
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                    onClick={() => setShowModal(false)}
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h1 className="bhvchvh">CYN-C PROJECT</h1>
+                </div>
+                <div className="main_text">
+                  <p>
+                    Join our Discord today and receive a free Cyn-Champion
+                    playing card to battle with in The Cynoseum, our P2E
+                    Mini-Game!
+                  </p>
+                  <hr />
+                </div>
+                <div className="links_icon">
+                  <span>
+                    <i class="fab fa-discord"></i>
+                  </span>{" "}
+                  <a href=" https://discord.gg/BpHbpDdt7w" target="_blank">
+                    Discord
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
