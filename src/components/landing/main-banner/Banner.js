@@ -313,7 +313,7 @@ ethereum(network: ethereum) {
           </div>
         </div>
       </section>
-      <section className="our_nft" id="ournft_page">
+      <section>
         <div className="container-fluid">
           <div style={{ display: "flex", justifyContent: "center" }}>
             <img
@@ -323,6 +323,8 @@ ethereum(network: ethereum) {
             />
           </div>
         </div>
+      </section>
+      <section className="our_nft" id="ournft_page">
         <div className="shadoww7">
           <img
             src="./assestmeta/Crynical/s7.png"
