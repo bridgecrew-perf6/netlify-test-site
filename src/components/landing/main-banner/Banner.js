@@ -16,7 +16,7 @@ const Banner = () => {
   useEffect(() => {
     setTimeout(() => {
       PurchaseModalOpen();
-    }, 10000)
+    }, 10000);
   }, []);
 
   let axios = require("axios");
@@ -314,6 +314,15 @@ ethereum(network: ethereum) {
         </div>
       </section>
       <section className="our_nft" id="ournft_page">
+        <div className="container-fluid">
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <img
+              src="./assestmeta/Crynical/roadmap.png"
+              width="100%"
+              align="center"
+            />
+          </div>
+        </div>
         <div className="shadoww7">
           <img
             src="./assestmeta/Crynical/s7.png"
@@ -408,22 +417,26 @@ ethereum(network: ethereum) {
                     <h4>Taxation</h4>
                     <p>
                       <h5>2% Reflection</h5>
-                      <p>2% of ALL transactions for buying and selling will be
-                      reflected back to all holders of CYN-Coin.</p>
+                      <p>
+                        2% of ALL transactions for buying and selling will be
+                        reflected back to all holders of CYN-Coin.
+                      </p>
                       <br />
                       <h5>1% Community Fund</h5>
-                      <p>1% of all transactions will be sent to a gnosis safe
-                      wallet, funds will be used to add incentive for new
-                      investors and reward existing CYN-Coin holders.</p>
+                      <p>
+                        1% of all transactions will be sent to a gnosis safe
+                        wallet, funds will be used to add incentive for new
+                        investors and reward existing CYN-Coin holders.
+                      </p>
                       <br />
                       <h5>1% Project Fund</h5>
-                      <p>1% of all transactions will be sent to a gnosis safe
-                      wallet, funds will be used to develop the project.</p>
+                      <p>
+                        1% of all transactions will be sent to a gnosis safe
+                        wallet, funds will be used to develop the project.
+                      </p>
                       <br />
                     </p>
-                    <h3>
-                      Contract Address
-                    </h3>
+                    <h3>Contract Address</h3>
                     <p>0xa5522d6137Ece774e8084BBf9c34398192cCdCa5</p>
                     <button>
                       {" "}
@@ -499,10 +512,13 @@ ethereum(network: ethereum) {
                 <div className="right">
                   <h4>Step-01: Create a MetaMask Wallet</h4>
                   <p>
-                    $CYNC token is available on the Ethereum blockchain.<br/>
+                    $CYNC token is available on the Ethereum blockchain.
+                    <br />
                     MetaMask is a third party ERC20 (Ethereum) browser wallet,
-                    and the very best at that!<br/> On Google Chrome, visit
-                    metamask.io to download the extension and set up a wallet.<br/>
+                    and the very best at that!
+                    <br /> On Google Chrome, visit metamask.io to download the
+                    extension and set up a wallet.
+                    <br />
                     On mobile? Get MetaMask's app for iPhone or Android.
                   </p>
                 </div>
@@ -515,8 +531,10 @@ ethereum(network: ethereum) {
                   <h4>Step-02: Send $ETH to MetaMask</h4>
                   <p>
                     Acquire Ethereum through MetaMask itself or transfer it to
-                    your<br/>MetaMask wallet address from another wallet (e.g.
-                    Coinbase or Binance).
+                    your
+                    <br />
+                    MetaMask wallet address from another wallet (e.g. Coinbase
+                    or Binance).
                   </p>
                 </div>
                 <div className="left">
@@ -532,11 +550,15 @@ ethereum(network: ethereum) {
                 </div>
                 <div className="right">
                   <h4>Step-03: Swap $ETH for $CYNC</h4>
-                  <p style={{wordWrap: 'break-word'}}>
-                    Add $CYNC Contract Address to MetaMask Custom Token - <br/>
-                    <b>0xa5522d6137Ece774e8084BBf9c34398192cCdCa5</b> <br/> Enter the amount
-                    of $ETH you would like to swap for $CYNC. Click<br/> Connect
-                    Wallet then Swap!<br/>You are now a $CYNC Holder!
+                  <p style={{ wordWrap: "break-word" }}>
+                    Add $CYNC Contract Address to MetaMask Custom Token - <br />
+                    <b>
+                      0xa5522d6137Ece774e8084BBf9c34398192cCdCa5
+                    </b> <br /> Enter the amount of $ETH you would like to swap
+                    for $CYNC. Click
+                    <br /> Connect Wallet then Swap!
+                    <br />
+                    You are now a $CYNC Holder!
                   </p>
                 </div>
               </div>
@@ -610,8 +632,15 @@ ethereum(network: ethereum) {
           />
         </div>
       </section>
-      <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
-      <div class="commonninja_component" comp-type="feed" comp-id="cffe189f-480f-4b65-a957-18450f0ec646"></div>
+      <script
+        src="https://cdn.commoninja.com/sdk/latest/commonninja.js"
+        defer
+      ></script>
+      <div
+        class="commonninja_component"
+        comp-type="feed"
+        comp-id="cffe189f-480f-4b65-a957-18450f0ec646"
+      ></div>
       <section className="meet_our" id="meetour_page">
         <div className="container_fluid">
           <div className="row">
