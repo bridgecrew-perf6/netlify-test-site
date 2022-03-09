@@ -963,26 +963,29 @@ body{
 }
 
 .modal-content{
-    background: transparent;
+    background: #03001E;
     border: 5px solid #C1FFF8;
 }
 .modal-main{
     background: black;
     opacity: 0.8;
-    .close{
-        position: absolute;
-        right: -16px;
-        top: -19px;
-        background: #0E1237;
-        color: #C1FFF8;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        z-index: 11111;
-        opacity: 1;
-    }
+    
 }
 .modal-body{
+    .flex {
+        .close{
+            position: absolute;
+            right: -16px;
+            top: -19px;
+            background: #0E1237;
+            color: #C1FFF8;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            z-index: 11111;
+            opacity: 1;
+        }
+    }
     .main_text{
         margin-bottom: 1rem;
         .bhvchvh{
