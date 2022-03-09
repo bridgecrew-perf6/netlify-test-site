@@ -873,13 +873,13 @@ ethereum(network: ethereum) {
         </div> */}
       </section>
 
-      <button
+      {/* <button
         type="button"
         class="btn btn-primary sbjdfbsj"
         onClick={PurchaseModalOpen}
       >
         Launch demo modal
-      </button>
+      </button> */}
       <div
         class="modal fade modal-main"
         id="exampleModal"
