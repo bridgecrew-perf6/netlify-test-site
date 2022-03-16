@@ -3,13 +3,10 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./banner.scss";
-import { useHistory } from "react-router-dom";
+import CommonNinja from "../common-ninja";
+import Affiliates from "../Affiliate";
 const Banner = () => {
   const [showModal, setShowModal] = useState(false);
-
-  const PurchaseModalclose = () => {
-    window.$("#exampleModal").modal("hide");
-  };
   const [price, setprice] = useState(0);
   useEffect(() => {
     setTimeout(() => {
@@ -18,7 +15,6 @@ const Banner = () => {
   }, []);
 
   let axios = require("axios");
-  const history = useHistory();
   const routeChange = () => {
     let path = `https://opensea.io/CYN-C`;
     window.open(path, "_blank");
@@ -171,7 +167,11 @@ ethereum(network: ethereum) {
                     />
                   </div>
                   <div className="logo_img">
-                    <a href="https://twitter.com/CYNCProject" target="_blank">
+                    <a
+                      href="https://twitter.com/CYNCProject"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <div className="img">
                         <span>
                           <i class="fab fa-twitter"></i>
@@ -179,7 +179,11 @@ ethereum(network: ethereum) {
                       </div>
                     </a>
 
-                    <a href="https://facebook.com/CYNCProject" target="_blank">
+                    <a
+                      href="https://facebook.com/CYNCProject"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <div className="img">
                         <span>
                           <i class="fab fa-facebook"></i>
@@ -195,7 +199,11 @@ ethereum(network: ethereum) {
                         />
                       </div>
                     </a>
-                    <a href="https://medium.com/@cyn-c" target="_blank">
+                    <a
+                      href="https://medium.com/@cyn-c"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <div className="img">
                         <img
                           src="./assestmeta/Crynical/M.png"
@@ -205,7 +213,11 @@ ethereum(network: ethereum) {
                       </div>
                     </a>
 
-                    <a href="https://t.me/CYNCommunity" target="_blank">
+                    <a
+                      href="https://t.me/CYNCommunity"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <div className="img">
                         <img
                           src="./assestmeta/Crynical/messagevector.png"
@@ -215,7 +227,11 @@ ethereum(network: ethereum) {
                       </div>
                     </a>
 
-                    <a href="https://discord.gg/BpHbpDdt7w" target="_blank">
+                    <a
+                      href="https://discord.gg/BpHbpDdt7w"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <div className="img">
                         <img
                           src="./assestmeta/Crynical/vector.png"
@@ -228,6 +244,7 @@ ethereum(network: ethereum) {
                     <a
                       href="https://www.reddit.com/r/CYNC_Project/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <div className="img">
                         <img
@@ -311,13 +328,14 @@ ethereum(network: ethereum) {
           </div>
         </div>
       </section>
-      <section>
+      <section id="road-map">
         <div className="container-fluid">
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div style={{ display: "flex" }}>
             <img
               src="./assestmeta/Crynical/roadmap.png"
               width="100%"
               align="center"
+              alt="roadmap"
             />
           </div>
         </div>
@@ -438,10 +456,21 @@ ethereum(network: ethereum) {
                     </p>
                     <h3>Contract Address</h3>
                     <p>0xa5522d6137Ece774e8084BBf9c34398192cCdCa5</p>
-                    <button>
-                      {" "}
-                      <a href="/Swap"> BUY ON CYNSWAP</a>
-                    </button>
+                    <div className="flex column">
+                      <button className="about-buttons">
+                        <a
+                          href="./assestmeta/Crynical/CYN-C_Token_Audit.pdf"
+                          target="_blank"
+                        >
+                          {" "}
+                          TOKEN AUDIT
+                        </a>
+                      </button>
+                      <button className="about-buttons">
+                        {" "}
+                        <a href="/Swap"> BUY ON CYNSWAP</a>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -632,10 +661,9 @@ ethereum(network: ethereum) {
           />
         </div>
       </section>
-      <script
-        src="https://cdn.commoninja.com/sdk/latest/commonninja.js"
-        defer
-      ></script>
+      <section>
+        <CommonNinja />
+      </section>
       <div
         class="commonninja_component"
         comp-type="feed"
@@ -754,6 +782,22 @@ ethereum(network: ethereum) {
           </div>
         </div>
       </section>
+      <section id="affiliates" className="join_our">
+        <div className="container_fluid">
+          <div className="row">
+            <div className="col-xl-11 col-lg-11 col-md-11 col-12 m-auto">
+              <div className="bg">
+                <div className="text">
+                  <h1 className="ghghg">Affiliates</h1>
+                </div>
+                <div className="logo_img">
+                  <Affiliates />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="join_our" id="joinour_page">
         <div className="shadoww10">
           <img
@@ -773,7 +817,11 @@ ethereum(network: ethereum) {
                   <h1 className="ghghg">join our community</h1>
                 </div>
                 <div className="logo_img">
-                  <a href="https://twitter.com/CYNCProject" target="_blank">
+                  <a
+                    href="https://twitter.com/CYNCProject"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="img">
                       <span>
                         <i class="fab fa-twitter"></i>
@@ -781,7 +829,11 @@ ethereum(network: ethereum) {
                     </div>
                   </a>
 
-                  <a href="https://facebook.com/CYNCProject" target="_blank">
+                  <a
+                    href="https://facebook.com/CYNCProject"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="img">
                       <span>
                         <i class="fab fa-facebook"></i>
@@ -797,7 +849,11 @@ ethereum(network: ethereum) {
                       />
                     </div>
                   </a>
-                  <a href="https://medium.com/@cyn-c" target="_blank">
+                  <a
+                    href="https://medium.com/@cyn-c"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="img">
                       <img
                         src="./assestmeta/Crynical/M.png"
@@ -807,7 +863,11 @@ ethereum(network: ethereum) {
                     </div>
                   </a>
 
-                  <a href="https://t.me/CYNCommunity" target="_blank">
+                  <a
+                    href="https://t.me/CYNCommunity"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="img">
                       <img
                         src="./assestmeta/Crynical/messagevector.png"
@@ -830,10 +890,24 @@ ethereum(network: ethereum) {
                   <a
                     href="https://www.reddit.com/r/CYNC_Project/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <div className="img">
                       <img
                         src="./assestmeta/Crynical/discord.png"
+                        alt="img"
+                        className="img-fluid"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    href="https://qm.qq.com/cgi-bin/qm/qr?k=Hs4-wPmYxjl4d9QKcMx_cFZvJRyWWMAp&authKey=LYGhGtJtMo1n6+PR6NfVAZ2aADWlNXKTo0nzdnNwHscaztqeGR0mWDpBYVLJZF6P&noverify=0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="img">
+                      <img
+                        src="./assestmeta/Crynical/qq.png"
                         alt="img"
                         className="img-fluid"
                       />

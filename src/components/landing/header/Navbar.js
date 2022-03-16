@@ -163,6 +163,13 @@ const Navbar = () => {
                           </HashLink>
                         </li>
                         <li>
+                          <HashLink to="/#road-map">
+                            <a class="dropdown-item" href="/">
+                              Roadmap
+                            </a>
+                          </HashLink>
+                        </li>
+                        <li>
                           <hr class="dropdown-divider" />
                         </li>
                         <li>
@@ -208,6 +215,13 @@ const Navbar = () => {
                           <HashLink to="/#meetour_page">
                             <a class="dropdown-item" href="#">
                               THE TEAM
+                            </a>
+                          </HashLink>
+                        </li>
+                        <li>
+                          <HashLink to="/#affiliates">
+                            <a class="dropdown-item" href="#">
+                              Affiliates
                             </a>
                           </HashLink>
                         </li>

@@ -13,6 +13,7 @@
     "@web3-react/walletconnect-connector": "^6.2.4",
     "axios": "^0.22.0",
     "bignumber.js": "^9.0.1",
+    "commonninja-react": "^1.0.3",
     "eth": "^4.0.1",
     "fontawesome": "^4.7.0",
     "ipfs-http-client": "^53.0.1",

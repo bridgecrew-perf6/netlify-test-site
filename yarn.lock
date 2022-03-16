@@ -4547,6 +4547,11 @@ commondir@^1.0.1:
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
   integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
 
+commonninja-react@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/commonninja-react/-/commonninja-react-1.0.3.tgz#e69fb498173ad944a2f178b611b6827dcd5524a9"
+  integrity sha512-uJ5fg87Z+QzOa8ARUuzZ3eFY7IFoRfgP5U92L1qoMC3i6X3sM7k5snOAye/S3IOGp3qkTzS779xzzRmWDY37xg==
+
 component-emitter@^1.2.1:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
