@@ -234,7 +234,7 @@ ethereum(network: ethereum) {
                     >
                       <div className="img">
                         <img
-                          src="./assestmeta/Crynical/vector.png"
+                          src="./assestmeta/Crynical/Vector.png"
                           alt="img"
                           className="img-fluid"
                         />
@@ -914,7 +914,7 @@ ethereum(network: ethereum) {
                   <a href=" https://discord.gg/BpHbpDdt7w" target="_blank">
                     <div className="img">
                       <img
-                        src="./assestmeta/Crynical/vector.png"
+                        src="./assestmeta/Crynical/Vector.png"
                         alt="img"
                         className="img-fluid"
                       />
