@@ -395,6 +395,34 @@ ethereum(network: ethereum) {
                     <img src="./assestmeta/NFTS/Sinthya.jpeg" alt="img" />
                     <h4>Sinthya</h4>
                   </div>
+                  <div class="item" onClick={routeChange}>
+                    <img src="./assestmeta/NFTS/C-Force.png" alt="img" />
+                    <h4>C-Force</h4>
+                  </div>
+                  <div class="item" onClick={routeChange}>
+                    <img src="./assestmeta/NFTS/Ivan.png" alt="img" />
+                    <h4>Ivan</h4>
+                  </div>
+                  <div class="item" onClick={routeChange}>
+                    <img src="./assestmeta/NFTS/Lady_Voss.png" alt="img" />
+                    <h4>Lady Voss</h4>
+                  </div>
+                  <div class="item" onClick={routeChange}>
+                    <img src="./assestmeta/NFTS/Ranger_Brooks.png" alt="img" />
+                    <h4>Ranger Brooks</h4>
+                  </div>
+                  <div class="item" onClick={routeChange}>
+                    <img src="./assestmeta/NFTS/Shinsei.png" alt="img" />
+                    <h4>Shinsei</h4>
+                  </div>
+                  <div class="item" onClick={routeChange}>
+                    <img src="./assestmeta/NFTS/vince_sage.png" alt="img" />
+                    <h4>Vince Sage</h4>
+                  </div>
+                  <div class="item" onClick={routeChange}>
+                    <img src="./assestmeta/NFTS/Zeven.png" alt="img" />
+                    <h4>Zeven</h4>
+                  </div>
                 </OwlCarousel>
               </div>
             </div>
@@ -788,7 +816,13 @@ ethereum(network: ethereum) {
             <div className="col-xl-11 col-lg-11 col-md-11 col-12 m-auto">
               <div className="bg">
                 <div className="text">
-                  <h1 className="ghghg">Affiliates</h1>
+                  <div className="banner_imgncsjcn">
+                    <img
+                      src="./assestmeta/affiliates/affiliate.svg"
+                      alt="img"
+                    />
+                  </div>
+                  <h1 className="ghghg">Affiliate</h1>
                 </div>
                 <div className="logo_img">
                   <Affiliates />
