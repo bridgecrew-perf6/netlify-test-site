@@ -58,13 +58,13 @@ const Navbar = () => {
     localStorage.setItem("toggle", false);
   };
 
-  const connection = async() => {
+  const connection = async () => {
     if (active) {
       await disconnect();
     } else {
       setShowModal(true);
     }
-  }
+  };
 
   useEffect(() => {
     let metamask = localStorage.getItem("metamask")
@@ -271,13 +271,10 @@ const Navbar = () => {
                                         </li> */}
                   </ul>
 
-                  <button
-                    className="sbvsx"
-                    onClick={() => connection()}
-                  >
+                  <button className="sbvsx" onClick={() => connection()}>
                     {!active
                       ? "Connect Wallet "
-                      : account.slice(0,6) + "..." + account.slice(-4)}
+                      : account.slice(0, 6) + "..." + account.slice(-4)}
                   </button>
                   {/* <form className="form-inline my-2 my-lg-0">
                                         <a className="nav-buttoo" href="https://docs.google.com/forms/d/e/1FAIpQLSdRkAPW_zLgEFBqNvASjgPBqAYozeAkcG1tkVOdr5GLs3la8w/viewform?usp=sf_link" target="_blank">Apply for IDO</a>

@@ -254,6 +254,19 @@ ethereum(network: ethereum) {
                         />
                       </div>
                     </a>
+                    <a
+                      href="https://qm.qq.com/cgi-bin/qm/qr?k=Hs4-wPmYxjl4d9QKcMx_cFZvJRyWWMAp&authKey=LYGhGtJtMo1n6+PR6NfVAZ2aADWlNXKTo0nzdnNwHscaztqeGR0mWDpBYVLJZF6P&noverify=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="img">
+                        <img
+                          src="./assestmeta/Crynical/qq.png"
+                          alt="img"
+                          className="img-fluid"
+                        />
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -328,8 +341,18 @@ ethereum(network: ethereum) {
           </div>
         </div>
       </section>
-      <section id="road-map">
+      <section id="road-map" className="road-map">
         <div className="container-fluid">
+          <div className="row">
+            <div className="col-xl-11 col-lg-11 col-md-10 col-12 m-auto">
+              <div className="text">
+                <div className="banner_imgncsjcn">
+                  <img src="./assestmeta/Crynical/roadmap.svg" alt="img" />
+                </div>
+                <h1 className="ghghg">Roadmap</h1>
+              </div>
+            </div>
+          </div>
           <div style={{ display: "flex" }}>
             <img
               src="./assestmeta/Crynical/roadmap.png"
@@ -483,7 +506,7 @@ ethereum(network: ethereum) {
                       <br />
                     </p>
                     <h3>Contract Address</h3>
-                    <p>0xa5522d6137Ece774e8084BBf9c34398192cCdCa5</p>
+                    <span>0xa5522d6137Ece774e8084BBf9c34398192cCdCa5</span>
                     <div className="flex column">
                       <button className="about-buttons">
                         <a

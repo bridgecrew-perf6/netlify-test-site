@@ -49,7 +49,7 @@ const Affiliates = () => {
       link: "https://opensea.io/CYN-C",
     },
     {
-      image: "./assestmeta/affiliates/CryptoDaily.jpeg",
+      image: "./assestmeta/affiliates/CryptoDaily.png",
       label: "Crypto Daily",
       link: "https://cryptodaily.co.uk/2022/03/cyn-coin-and-its-new-comic-metaverse-hit-the-blockchain",
     },
