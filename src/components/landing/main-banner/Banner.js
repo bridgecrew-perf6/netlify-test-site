@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactPlayer from 'react-player'
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -661,23 +662,39 @@ ethereum(network: ethereum) {
             className="img-fluid"
           />
         </div>
-        {/* <div className="banner_imgncsjcn">
-          <img src="./assestmeta/Crynical/learn1.svg" alt="img" />
-        </div> */}
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-xl-10 col-lg-10 col-md-11 col-12 m-auto">
+              <div className="col-items">
+              <ReactPlayer
+                url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                loop={true}
+                controls={false}
+                muted={true}
+                width={'100%'}
+                />
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <section className="learn_us">
+        <div className="shadoww">
+          <img
+            src="./assestmeta/Crynical/s2.png"
+            alt="img"
+            className="img-fluid"
+          />
+        </div>
+        
         <div className="container-fluid">
           <div className="row">
             <div className="col-xl-10 col-lg-10 col-md-10 col-12 m-auto">
               <div className="col_items">
-                {/* <div className="text">
-                  <h1 className="ghghg">learn about us</h1>
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium <br /> voluptatum deleniti atque
-                    corrupti quos quidem rerum facilis est et expedita.
-                  </p>
-                </div> */}
+                
                 <div className="learnus_img">
-                  {/* <img src="./assestmeta/Crynical/picture.png" alt="img" /> */}
+                  
                   <video
                     className="video-player"
                     muted="muted"
@@ -711,7 +728,7 @@ ethereum(network: ethereum) {
             className="img-fluid"
           />
         </div>
-      </section>
+      </section> */}
       <section>
         <CommonNinja />
       </section>
