@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import ReactPlayer from 'react-player'
+import React, { useState } from "react";
+// import ReactPlayer from 'react-player'
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -7,13 +7,13 @@ import "./banner.scss";
 import CommonNinja from "../common-ninja";
 import Affiliates from "../Affiliate";
 const Banner = () => {
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
   const [price, setprice] = useState(0);
-  useEffect(() => {
-    setTimeout(() => {
-      setShowModal(true);
-    }, 10000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowModal(true);
+  //   }, 10000);
+  // }, []);
 
   let axios = require("axios");
   const routeChange = () => {
@@ -654,7 +654,7 @@ ethereum(network: ethereum) {
           />
         </div>
       </section>
-      <section className="learn_us">
+      {/* <section className="learn_us">
         <div className="shadoww">
           <img
             src="./assestmeta/Crynical/s2.png"
@@ -685,8 +685,8 @@ ethereum(network: ethereum) {
             className="img-fluid"
           />
         </div>
-      </section>
-      {/* <section className="learn_us">
+      </section> */}
+      <section className="learn_us">
         <div className="shadoww">
           <img
             src="./assestmeta/Crynical/s2.png"
@@ -735,7 +735,7 @@ ethereum(network: ethereum) {
             className="img-fluid"
           />
         </div>
-      </section> */}
+      </section>
       <section>
         <CommonNinja />
       </section>
@@ -1064,11 +1064,10 @@ ethereum(network: ethereum) {
       >
         Launch demo modal
       </button> */}
-      {showModal && (
+      {/* {showModal && (
         <div class="modal">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-              {/* </div> */}
               <div class="modal-body">
                 <div className="flex space-between">
                   <button
@@ -1102,7 +1101,7 @@ ethereum(network: ethereum) {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 };
