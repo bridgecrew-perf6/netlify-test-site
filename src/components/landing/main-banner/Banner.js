@@ -162,7 +162,7 @@ ethereum(network: ethereum) {
                 <div className="col-xl-12 col-lg-12 col-md-12 col-12">
                   <div className="banner_img">
                     <img
-                      src="./assestmeta/Crynical/CYNC Project landing page new.png"
+                      src="./assestmeta/Crynical/Banner_ad.jpg"
                       alt="img"
                       className="img-fluid s"
                     />
